@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         BetterGoG
 // @namespace    https://github.com/Laxii-null/BetterGoG
-// @version      1.3
+// @version      1.4
 // @description  UI improvements and some fixes for GoG
 // @author       Laxii
 // @match        https://www.gog.com/*
@@ -148,7 +148,6 @@
 
 
     // start of all this
-    removeBefore();
     removeSVG();
     removeIcon();
     removeSection();
@@ -158,6 +157,7 @@
     removeGalaxyBanner();
     removeOrderDivs();
     changeTextOnMoviesPage();
+    removeGalaxyLink();
     if (window.location.href.includes('/account')) {
         removeSection();
         changeText();
@@ -165,7 +165,7 @@
             removeProductSupportLink();
         }
 
-        // monitoring changes + updating
+  // monitoring loading  + catching up with the loading up
         var observer = new MutationObserver(function(mutations) {
             mutations.forEach(function(mutation) {
                 removeSection();
@@ -181,7 +181,7 @@
         observer.observe(document.body, { childList: true, subtree: true });
     }
 
-    // again start just to be sure yk
+    // again start just to be sure that it works you know
     window.addEventListener('load', function() {
         removeGalaxyBanner();
         removeOrderDivs();
