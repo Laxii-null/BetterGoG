@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         BetterGoG
-// @namespace    http://tampermonkey.net/
-// @version      1.0
+// @namespace    https://github.com/Laxii-null/BetterGoG
+// @version      1.1
 // @description  UI improvements and some fixes for GoG
 // @author       Laxii
 // @match        https://www.gog.com/*
-// @grant        none
+// @updateURL    https://github.com/Laxii-null/BetterGoG/raw/refs/heads/main/BetterGoG.user.js
+// @downloadURL  https://github.com/Laxii-null/BetterGoG/raw/refs/heads/main/BetterGoG.user.js
 // ==/UserScript==
 
 (function() {
@@ -157,7 +158,7 @@
             removeProductSupportLink();
         }
 
-        // monitoring changes + updating
+        // monitoring loading  + catching up with the loading up
         var observer = new MutationObserver(function(mutations) {
             mutations.forEach(function(mutation) {
                 removeSection();
@@ -173,7 +174,7 @@
         observer.observe(document.body, { childList: true, subtree: true });
     }
 
-    // again start just to be sure yk
+    // again start just to be sure that it works you know
     window.addEventListener('load', function() {
         removeGalaxyBanner();
         removeOrderDivs();
