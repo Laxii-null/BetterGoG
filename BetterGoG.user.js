@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         BetterGoG
 // @namespace    https://github.com/Laxii-null/BetterGoG
-// @version      1.1
+// @version      1.2
 // @description  UI improvements and some fixes for GoG
 // @author       Laxii
 // @match        https://www.gog.com/*
