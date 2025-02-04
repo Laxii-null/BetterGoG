@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         BetterGoG
 // @namespace    https://github.com/Laxii-null/BetterGoG
-// @version      1.2
+// @version      1.3
 // @description  UI improvements and some fixes for GoG
 // @author       Laxii
 // @match        https://www.gog.com/*
@@ -141,7 +141,14 @@
         }
     }
 
+
+
+
+
+
+
     // start of all this
+    removeBefore();
     removeSVG();
     removeIcon();
     removeSection();
@@ -151,7 +158,6 @@
     removeGalaxyBanner();
     removeOrderDivs();
     changeTextOnMoviesPage();
-    removeGalaxyLink();
     if (window.location.href.includes('/account')) {
         removeSection();
         changeText();
@@ -159,7 +165,7 @@
             removeProductSupportLink();
         }
 
-        // monitoring loading  + catching up with the loading up
+        // monitoring changes + updating
         var observer = new MutationObserver(function(mutations) {
             mutations.forEach(function(mutation) {
                 removeSection();
@@ -175,7 +181,7 @@
         observer.observe(document.body, { childList: true, subtree: true });
     }
 
-    // again start just to be sure that it works you know
+    // again start just to be sure yk
     window.addEventListener('load', function() {
         removeGalaxyBanner();
         removeOrderDivs();
@@ -186,11 +192,3 @@
         }
     });
 })();
-
-
-
-
-
-
-
-
