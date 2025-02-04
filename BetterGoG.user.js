@@ -141,12 +141,6 @@
         }
     }
 
-
-
-
-
-
-
     // start of all this
     removeSVG();
     removeIcon();
@@ -165,7 +159,7 @@
             removeProductSupportLink();
         }
 
-  // monitoring loading  + catching up with the loading up
+   // monitoring loading  + catching up with the loading up
         var observer = new MutationObserver(function(mutations) {
             mutations.forEach(function(mutation) {
                 removeSection();
