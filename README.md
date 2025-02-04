@@ -3,4 +3,4 @@
 
 Tested on Tampermonkey v.5.3.3 (currently the latest version) on Microsoft Edge
 
-# (INSTALL)[https://github.com/Laxii-null/BetterGoG/raw/refs/heads/main/BetterGoG.user.js]
+# [INSTALL](https://github.com/Laxii-null/BetterGoG/raw/refs/heads/main/BetterGoG.user.js)
