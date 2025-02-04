@@ -151,6 +151,7 @@
     removeGalaxyBanner();
     removeOrderDivs();
     changeTextOnMoviesPage();
+    removeGalaxyLink();
     if (window.location.href.includes('/account')) {
         removeSection();
         changeText();
